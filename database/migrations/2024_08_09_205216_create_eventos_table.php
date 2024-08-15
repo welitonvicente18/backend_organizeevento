@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->string('nome_evento');
+            $table->integer('tipo_evento');
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->date('data_prazo_inscricao');

@@ -31,10 +31,9 @@ class EventoController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-
         $validator = Validator::make($request->all(), [
             'nome_evento' => 'required',
+            'tipo_evento' => 'required',
             'data_inicio' => 'required|date',
             'data_fim' => 'required|date',
             'data_prazo_inscricao' => 'required|date',
@@ -107,6 +106,7 @@ class EventoController extends Controller
 
         $validator = Validator::make($request->all(), [
             'nome_evento' => 'required',
+            'tipo_evento' => 'required',
             'data_inicio' => 'required|date',
             'data_fim' => 'required|date',
             'data_prazo_inscricao' => 'required|date',
